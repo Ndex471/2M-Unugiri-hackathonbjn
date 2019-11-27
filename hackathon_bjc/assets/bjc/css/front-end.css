@@ -1,0 +1,88 @@
+/* footer section */
+#footered {
+  background: #121212;
+  padding-bottom: 40px; }
+  #footered .col-inner {
+    margin-bottom: 60px; }
+    #footered .col-inner h2 {
+      font-family: 'Lato', sans-serif;
+      font-size: 24px;
+      font-weight: light;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 30px; }
+  #footered .navigation-menu a {
+    padding: 6px 0;
+    color: #555;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color .2s; }
+  #footered .navigation-menu a:hover {
+    color: #888888; }
+  #footered .news p {
+    margin-bottom: 25px;
+    line-height: 2;
+    color: #555555; }
+  #footered .news a {
+    color: #a2a2a2;
+    font-weight: 600; }
+  #footered .news .text-primary {
+    color: #188ae2;
+    font-weight: normal;
+    font-style: italic; }
+  #footered .images a {
+    width: 32%;
+    float: left;
+    display: inline-block;
+    margin-right: 2%; }
+    #footered .images a:last-child {
+      margin-right: 0; }
+    #footered .images a > img {
+      border-radius: 5px; }
+  #footered .icons {
+    margin-top: 30px; }
+    #footered .icons .icon {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      background: #2a2929;
+      color: #fff;
+      margin-right: 8px;
+      margin-bottom: 0;
+      border: none; }
+      #footered .icons .icon:hover {
+        background: #188ae2; }
+
+/* copyright section */
+#copyright {
+  padding: 10px 0;
+  background: #0b0b0b; }
+  #copyright p {
+    margin: 0;
+    color: #555555; }
+
+#loading-div {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 9999;
+  transition: opacity 3s;
+  background-color: #f3f3f3; }
+  #loading-div img {
+    display: block;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px); }
+  body.loading-done #loading-div {
+    opacity: 0;
+    visibility: hidden; }
+
+/*# sourceMappingURL=landing-page.css.map */
