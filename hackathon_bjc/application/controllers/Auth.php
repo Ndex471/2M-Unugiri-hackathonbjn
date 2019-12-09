@@ -120,7 +120,7 @@ class Auth extends CI_Controller {
 				'telpon' => htmlspecialchars($this->input->post('telpon', true)),
 				'gambar' => 'default.jpg',
 				'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-				'role_id' => 4,
+				'role_id' => 2,
 				'is_active' => 0,
 				'date_created' => time(),
 			];
