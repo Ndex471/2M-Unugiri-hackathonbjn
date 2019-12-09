@@ -6,6 +6,7 @@
         <title>Bojonegoro Job Center</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" sizes="196x196" href="<?= base_url();?>assets/favicon.png">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         
@@ -37,8 +38,8 @@
         <div class="container">
             <nav class="navbar navbar-fixed-top  navigation " id="top-nav">
                 <a class="navbar-brand" href="#">
-                    <!-- <img src="<?= base_url() ?>assets/home/images/logo.png" alt=""> -->
-                    BOJONEGORO JOB CENTER
+                    <img src="<?= base_url() ?>assets/logo1.png" alt="" style="margin-top:-13px" class="brandicon">
+                    <!-- BOJONEGORO JOB CENTER -->
                 </a>
 
               <button class="navbar-toggler hidden-lg-up float-lg-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
@@ -50,20 +51,33 @@
                     <a class="nav-link" href="#">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#about">PEKERJAAN</a>
+                    <a class="nav-link" href="<?= base_url('home/pekerjaan') ?>">PEKERJAAN</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#service">PERUSAHAAN</a>
+                    <a class="nav-link" href="<?= base_url('home/perusahaan') ?>">PERUSAHAAN</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#contact">CONTACT</a>
+                    <a class="nav-link" href="#contact">HUBUNGI KAMI</a>
+                  </li>
+                  <?php  
+                  $role = $this->session->userdata('role_id');
+                  if ($role) {
+                  ?>
+
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white"  href="<?= base_url() ?>/auth/logout"  onclick="return confirm('Anda yakin ingin logout ?')"><i class="fas fa-power-off"></i> LOGOUT</a>
+                  </li>
+                  <?php 
+                  }else {
+                  ?>
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white" href="<?= base_url('auth/daftar') ?>">DAFTAR</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link btn btn-primary text-white" href="#contact">DAFTAR</a>
+                    <a class="nav-link btn btn-warning text-white" href="<?= base_url('auth') ?>">LOGIN</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn btn-warning text-white" href="#contact">LOGIN</a>
-                  </li>
+                <?php } ?>
+
                 </ul>
               </div>
             </nav>
@@ -75,39 +89,39 @@
 	            <div class="row">
 	                <div class="col-md-7">
 	                    <div class="block" id="test">
-	                        <h1 class="wow fadeInDown" data-wow-delay="0.3s" data-wow-duration=".2s">Bojonegoro Job Center</h1>
-	                        <p class="wow fadeInDown text-capitalize" data-wow-delay="0.5s" data-wow-duration=".5s">Sistem informasi yang mempertemukan antara pencari kerja dan perusahaan yang mencari calon pekerja yang professional</p>
+	                        <h1 class="wow fadeInDown" data-wow-delay="0.3s" data-wow-duration=".2s" style="color: black">Bojonegoro Job Center</h1>
+	                        <p class="wow fadeInDown text-capitalize" data-wow-delay="0.5s" data-wow-duration=".5s" style="color: black">Sistem informasi yang mempertemukan antara pencari kerja dan perusahaan yang mencari calon pekerja professional dan kredibel</p>
 	                        <div class="wow fadeInDown" data-wow-delay="0.7s" data-wow-duration=".7s">
-	                        	<a class="btn btn-home" href="#about" role="button"><i class="fas fa-search"></i> Cari Pekerjaan</a>
+	                        	<a class="btn btn-home bg-danger" href="<?= base_url('home/pekerjaan') ?>" role="button" style="color: black"><i class="fas fa-search" style="color: black"></i> Cari Pekerjaan</a>
 	                        </div>
 	                    </div>
 	                </div>
 	                <div class="col-md-5 wow zoomIn">
-	                    <div class="block">
+	                    <div class="block" style="background-color: lightblue;opacity: 70%">
 	                        <div class="counter text-center">
 	                            <ul id="countdown_dashboard">
 	                                <li>
 	                                    <div class="dash days_dash">
-                                            <div class="p-2"><h2><b>3.000</b></h2></div>
-	                                        <span class="dash_title text-uppercase">Pekerjaan</span>
+                                            <div class="p-2" style="color:black;"><h2><b>3.000</b></h2></div>
+	                                        <span class="dash_title text-uppercase" style="color:black;">Pekerjaan</span>
 	                                    </div>
 	                                </li>
 	                                <li>
 	                                    <div class="dash hours_dash">
-                                            <div class="p-2"><h2><b>1.200</b></h2></div>
-	                                        <span class="dash_title text-uppercase">Perusahaan</span>
+                                            <div class="p-2" style="color:black;"><h2><b>1.200</b></h2></div>
+	                                        <span class="dash_title text-uppercase" style="color:black;">Perusahaan</span>
 	                                    </div>
 	                                </li>
 	                                <li>
 	                                    <div class="dash minutes_dash">
-                                            <div class="p-2"><h2><b>5.000</b></h2></div>
-	                                        <span class="dash_title text-uppercase">Pelamar</span>
+                                            <div class="p-2" style="color:black;"><h2><b>5.000</b></h2></div>
+	                                        <span class="dash_title text-uppercase" style="color:black;">Pelamar</span>
 	                                    </div>
 	                                </li>
 	                                <li>
 	                                    <div class="dash seconds_dash">
-                                            <div class="p-2"><h2><b>200</b></h2></div>
-	                                        <span class="dash_title text-uppercase">Bidang</span>
+                                            <div class="p-2" style="color:black;"><h2><b>200</b></h2></div>
+	                                        <span class="dash_title text-uppercase" style="color:black;">Bidang</span>
 	                                    </div>
 	                                </li>
 	                            </ul>
@@ -131,9 +145,9 @@
                         	<div class="sub-heading">
                         		<h3>Tentang Aplikasi</h3>
                         	</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla-mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p>
+                            <p>Bojonegoro Job Center merupakan platform web untuk mempertemukan pencari kerja dengan perusahaan/institusi/lembaga. Yang membedakan aplikasi Bojonegoro Job Center ini dengan aplikasi lain adalah di aplikasi ini para pencari kerja di test terlebih dahulu saat setelah pendaftaran akun. Dengan tujuan pihak perusahaan bisa memilih calon pekerjanya sesuai dengan nilai hasil test peserta.</p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, aspernatur.
+                               
                             </p>
                             
                         </div>
@@ -214,7 +228,7 @@
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
                         <div class="block">
                             <i class="tf-globe"></i>
-                            <h3>Programer</h3>
+                            <h3>Programmer</h3>
                             <p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
                         </div>
                     </div>
@@ -241,7 +255,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="block">
                             <div class="heading wow fadeInUp">
-                                <h2>Get In Touch</h2>
+                                <h2>HUBUNGI KAMI</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
                             </div>
                         </div>
@@ -284,7 +298,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
-                            <p>Copyright &copy; <a href="http://www.Themefisher.com">Themefisher</a>| All right reserved.</p>
+                            <p>Copyright &copy; <a href="#">2M UNUGIRI</a>| All right reserved.</p>
                         </div>
                     </div>
                 </div>
